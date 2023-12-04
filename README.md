@@ -1,7 +1,7 @@
 # Transcode and Move Audio Files
 
 ## What This Is
-A Python script that transcodes audio files between various formats. While there are scores of transcoders out there, this script is fine tuned to get the best tradeoff betwween quality and size for transcoding to Opus format.
+A Python script that transcodes audio files between various formats. While there are scores of transcoders out there, this script is fine tuned to get the best tradeoff betwween quality and size for transcoding to Opus format. This is especially important with storage constrained devices like mobile phones, where the trend is for manufacturers to do away with high capacity extendable local storage (read: u/SD cards!) and force users to switch to cloud providers.
 
 * Encoding to Opus from
   - Wav
