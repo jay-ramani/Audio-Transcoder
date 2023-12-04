@@ -23,14 +23,20 @@ A Python script that transcodes audio files between various formats. While there
 **Note**: Use a Python 3.6 environment or above to execute the script.
 
 ## External Tools Used
-Obviously, [Python](https://www.python.org) is used to interpret the script itself. The transcoding code uses external tools ('[opus-tools](https://opus-codec.org/downloads/)' and '[flac & metaflac](https://xiph.org/flac/documentation_tools.html)'). `flac` is used to encode and decode to and from FLAC, and `metaflac` to edit metadata.
+Obviously, [Python](https://www.python.org) is used to interpret the script itself. The transcoding code uses external tools ('[opus-tools](https://opus-codec.org/downloads/)' and '[flac & metaflac](https://xiph.org/flac/documentation_tools.html)').
+
+* `opusenc`: used to encode a compatible source format to Opus
+* `opusdec`: used to decode Opus to Wav
+* `opusinfo`: used to retrieve metadata from Opus
+* `flac`: used to encode and decode to and from FLAC
+* `metaflac` to edit FLAC metadata
 
 ## Where to Download the External Tools From
 * Binaries of opus-tools are available at https://archive.mozilla.org/pub/opus/win32/opus-tools-0.2-opus-1.3.zip
 * Binaries of flac are available at https://ftp.osuosl.org/pub/xiph/releases/flac/flac-1.4.3-win.zip
 
 ## Pre-requisites for Use
-Ensure you have these external tools installed and define the path appropriately for the required binaries (opusenc, opusdec, and flac) through the following variables under the respective Operating System checks in the function `dict_transcode_tool_platform_get()` in video_tagger.py:
+Ensure you have these external tools installed and define the path appropriately for the required binaries (`opusenc`, `opusdec`, and `flac`) through the following variables under the respective Operating System checks in the function `dict_transcode_tool_platform_get()` in transcode_and_move_audio_files.py:
 
 ```
 dict_encode_tool_windows
