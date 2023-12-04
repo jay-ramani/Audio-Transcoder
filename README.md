@@ -1,7 +1,7 @@
 # Transcode and Move Audio Files
 
 ## What This Is
-A Python script that transcodes audio files between various formats.
+A Python script that transcodes audio files between various formats. While there are scores of transcoders out there, this script is fine tuned to get the best tradeoff betwween quality and size for transcoding to Opus format.
 
 * Encoding to Opus from
   - Wav
@@ -30,7 +30,7 @@ Obviously, [Python](https://www.python.org) is used to interpret the script itse
 * Binaries of flac are available at https://ftp.osuosl.org/pub/xiph/releases/flac/flac-1.4.3-win.zip
 
 ## Pre-requisites for Use
-Ensure you have these external tools installed and define the path appropriately to `mkvpropedit` and `ffprobe` through the following variables under the respective Operating System checks in the function `dict_transcode_tool_platform_get()` in video_tagger.py:
+Ensure you have these external tools installed and define the path appropriately for the required binaries (opusenc, opusdec, and flac) through the following variables under the respective Operating System checks in the function `dict_transcode_tool_platform_get()` in video_tagger.py:
 
 ```
 dict_encode_tool_windows
@@ -114,6 +114,9 @@ At the end of its execution, the script presents a summary of files transcoded, 
 
 ## Logging
 For a post-mortem, or simply quenching curiosity, a log file is generated with whatever is attempted by the script. This log is generated in the local application data directory (applicable to Windows), under my name (Jay Ramani). For example, this would be `C:\Users\<user login>\AppData\Local\Jay Ramani\transcode_and_move_audio_files`.
+
+## TODO (What's Next)
+A GUI front-end to make things easy
 
 ## Known Issues
 
