@@ -114,8 +114,7 @@ Here's an example of transcoding a directory containing the source audio format 
 * `--decode-from`, or `-d`: Specify which of the supported encoded source formats is to be decoded
 * `--move-format`, or `-m`: Specify which of the supported encoded formats is to be moved to the destination
 * `--percentage-completion`, or `-p`: Report the percentage of completion. This comes handy when tagging a large number of files recursively (either with the right-click 'Send To' option, or through the command line). You might want to skip this option if you'd like the script to execute faster.
-
-Usage for command line options is available through the standard Unix `--help` option.
+* `--help`, or `-h`: Usage help for command line options
 
 ## Reporting a Summary
 At the end of its execution, the script presents a summary of files transcoded, failures (if any) and time taken. Again, this comes in handy when dealing with a large number of files.
